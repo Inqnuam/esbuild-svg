@@ -1,0 +1,38 @@
+{
+  "name": "esbuild-svg",
+  "description": "A plugin for esbuild that enables importing *.svg files as React components.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Inqnuam",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inqnuam/esbuild-svg.git"
+  },
+  "homepage": "https://github.com/inqnuam/esbuild-svg",
+  "scripts": {
+    "build": "node ./build.mjs",
+    "dev": "DEV=true node ./build.mjs"
+  },
+  "dependencies": {
+    "@svgr/core": "^8.0.0",
+    "@svgr/plugin-jsx": "^8.0.1",
+    "@svgr/plugin-svgo": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "@types/prettier": "^2.7.2",
+    "@types/svgo": "^3.0.0",
+    "esbuild": "^0.17.19",
+    "typescript": "^5.0.4"
+  }
+}

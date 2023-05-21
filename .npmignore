@@ -1,0 +1,5 @@
+.github
+src
+.gitignore
+build.mjs
+tsconfig.json
