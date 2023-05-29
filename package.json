@@ -1,7 +1,7 @@
 {
   "name": "esbuild-svg",
-  "description": "A plugin for esbuild that enables importing *.svg files as React components.",
-  "version": "1.0.0",
+  "description": "An esbuild plugin to transform your svg files to jsx components.",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Inqnuam",
   "main": "dist/index.js",

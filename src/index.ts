@@ -9,7 +9,7 @@ const jsImporter = new Set(["import-statement", "require-call", "dynamic-import"
 const defaultPlugins = [svgo, jsx];
 const ns = "svg-plugin";
 
-export default (config: Config = {}): Plugin => {
+module.exports = (config: Config = {}): Plugin => {
   if (!Array.isArray(config.plugins)) {
     config.plugins = defaultPlugins;
   }
@@ -33,13 +33,15 @@ export default (config: Config = {}): Plugin => {
           pluginData: {
             _customLoader: true,
             kind: args.kind,
+            resolveDir: path.dirname(path.resolve(args.importer)),
           },
         };
       });
 
       build.onLoad({ filter: /\.svg$/ }, async (args) => {
         if (args.pluginData?._customLoader && args.pluginData.kind != "url-token") {
-          return svgCache.contentOf(args.path);
+          const content = await svgCache.contentOf(args.path);
+          return { ...content, resolveDir: args.pluginData.resolveDir };
         }
 
         return {
