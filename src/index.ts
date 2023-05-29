@@ -9,7 +9,7 @@ const jsImporter = new Set(["import-statement", "require-call", "dynamic-import"
 const defaultPlugins = [svgo, jsx];
 const ns = "svg-plugin";
 
-module.exports = (config: Config = {}): Plugin => {
+export default (config: Config = {}): Plugin => {
   if (!Array.isArray(config.plugins)) {
     config.plugins = defaultPlugins;
   }

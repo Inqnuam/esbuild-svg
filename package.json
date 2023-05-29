@@ -1,7 +1,7 @@
 {
   "name": "esbuild-svg",
   "description": "An esbuild plugin to transform your svg files to jsx components.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "Inqnuam",
   "main": "dist/index.js",
