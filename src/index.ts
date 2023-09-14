@@ -25,6 +25,9 @@ export default (config: Config = {}): Plugin => {
         build.initialOptions.loader = { ".svg": "file" };
       }
       build.onResolve({ filter: /\.svg$/ }, async (args) => {
+        if (args.path.match(/^https?:\/\//)) {
+          return;
+        }
         return {
           path: path.resolve(args.resolveDir, args.path),
           suffix: "",

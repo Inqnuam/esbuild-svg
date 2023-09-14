@@ -1,7 +1,7 @@
 {
   "name": "esbuild-svg",
   "description": "An esbuild plugin to transform your svg files to jsx components.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Inqnuam",
   "main": "dist/index.js",
@@ -24,15 +24,15 @@
     "dev": "DEV=true node ./build.mjs"
   },
   "dependencies": {
-    "@svgr/core": "^8.0.0",
-    "@svgr/plugin-jsx": "^8.0.1",
-    "@svgr/plugin-svgo": "^8.0.1"
+    "@types/prettier": "^2.7.2",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.1",
-    "@types/prettier": "^2.7.2",
     "@types/svgo": "^3.0.0",
-    "esbuild": "^0.17.19",
-    "typescript": "^5.0.4"
+    "esbuild": "^0.19.3",
+    "typescript": "^5.2.2"
   }
 }
